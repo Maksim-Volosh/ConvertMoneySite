@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{% static "img/logo.png" %}" type="image/x-icon">
+  <meta name="description" content="Here you can convert money!">
+  
+  
+  <title>Convert money</title>
+  <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap-grid.min.css" %}">
+  <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap-reboot.min.css" %}">
+  <link rel="stylesheet" href="{% static "assets/animatecss/animate.css" %}">
+  <link rel="stylesheet" href="{% static "assets/socicon/css/styles.css" %}">
+  <link rel="stylesheet" href="{% static "assets/theme/css/style.css" %}">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="{% static "assets/mobirise/css/mbr-additional.css" %}"><link rel="stylesheet" href="{% static "assets/mobirise/css/mbr-additional.css" %}" type="text/css">
+  <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <main class="main">
+            <section data-bs-version="5.1" class="form5 cid-tJS9pBcTSa main-form" id="form02-6">
+                <div class="container">
+                    <div class="mbr-section-head mb-5">
+                        <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong class="">Currency сonverter</strong></h3>
+                        <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7 text-shadow" >Here you can convert currencies</h4>
+                    </div>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                            <form action="" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="uUfoe0KOU+G2LYcIs+/iv8SpNsReFRgSaYEqr2DfjVmy04tgR/iIYCB4xkLRCGu3h0T2gMpdm2Lg6DRuDNCQl2pnbEH24cKfDOCzvOkpul7/REvfI3nmpjBqr/tc8s+l">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div hidden="hidden" data-form-alert="" class="alert alert-success col-12"></div>
+                                    <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                                        Oops...! some problem!
+                                    </div>
+                                </div>
+                                <div class="dragArea row">
+                                    <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+                                        {{ form.curr }}
+                                    </div>
+                                    <div class="form__errors"><h1>{{ form.curr.errors }}</h1></div>
+                                    
+                                    <div class="col-12 form-group mb-3" data-for="phone">
+                                        {{ form.from_curr }}
+                                    </div>
+                                    <div class="col-12 form-group mb-3" data-for="textarea">
+                                        {{ form.to_curr }}
+                                    </div>
+                                    {% if result %}
+                                    <div class="form__result col-12 form-group mb-3"><h1 class="form-control select"> Result - {{ result}}</h1></div>
+                                    {% endif %}
+                                    {% if errors %}
+                                    <div class="form__errors"><h1>{{ errors }}</h1></div>
+                                    {% endif %}
+                                    <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                                        {% if not errors %}
+                                            <button type="submit" class="btn btn-primary display-7">Convert</button>
+                                        {% else %}
+                                            <a href="" class="btn btn-primary display-7">Try again</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <section data-bs-version="5.1" class="footer1 programm5 cid-tJS9NNcTLZ main-footer" once="footers" id="footer03-8">
+                <div class="container">
+                    <div class="row">
+
+                        
+
+                        <div class="col-12">
+                            
+                        </div>
+                        <div class="col-12 mt-5">
+                            <p class="mbr-fonts-style copyright display-7">
+                                © Currency сonverter
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>

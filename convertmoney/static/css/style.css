@@ -1,0 +1,90 @@
+/* Обнуление */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100% !important;
+    line-height: 1;
+    background-color: #f9f9f9;
+}
+
+body {
+    background-color: #f9f9f9;
+    
+}
+
+.wrapper {
+    min-height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background-color: #f9f9f9;
+    margin: 180px 0px 0px 0px;
+}
+
+/* ======================================= */
+
+.main {
+    flex: 1 1 auto !important;
+    background-color: #f9f9f9;
+}
+
+.cid-tJS9pBcTSa {
+    background-color: #f9f9f9;
+}
+
+.select {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    box-shadow: #c1c1c1 -8px 11px 20px;
+}
+
+.form-control:hover, .form-control:active {
+    box-shadow: #c1c1c1 -8px 11px 20px;
+}
+
+.btn-primary {
+    box-shadow: #c1c1c1 -8px 11px 20px;
+}
+
+.btn-primary:hover {
+    box-shadow: #c1c1c1 -8px 11px 20px;
+}
+
+.text-shadow {
+    text-shadow: #c1c1c1 -20px 13px 20px;
+}
+
