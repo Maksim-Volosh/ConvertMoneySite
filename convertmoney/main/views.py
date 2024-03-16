@@ -18,7 +18,7 @@ def index(request):
             from_curr_value = get_curr_value(from_curr)
             to_curr_value = get_curr_value(to_curr)
             if not (isinstance(curr, str) and isinstance(from_curr, str) and isinstance(to_curr, str)):
-                result = round((to_curr_value / from_curr_value) * curr, 2)
+                result = round((to_curr_value / from_curr_value) * curr, 4)
                 converted = f"{result} {to_curr} "
                 return render(request, 'main/index.html', {"form": form, "result": converted})
             else:
